@@ -5,8 +5,8 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
     xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
-    name="java.stuff"
-    label="Java Tools setup stuff">
+    name="luna.java.stuff"
+    label="Luna Java Tools setup stuff">
   <setupTask
       xsi:type="setup:VariableTask"
       name="train.url"
@@ -43,7 +43,7 @@
   <setupTask
       xsi:type="setup:EclipseIniTask"
       option="-Xmx"
-      value="4096m"
+      value="3172m"
       vm="true">
     <description>Set the heap space needed to work with the projects of ${scope.project.label}</description>
   </setupTask>
@@ -372,5 +372,5 @@
   <logicalProjectContainer
       xsi:type="setup:ProjectCatalog"
       href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']"/>
-  <description>Eclipse-Setup for useful Java tools and settings</description>
+  <description>Eclipse-Luna Setup for useful Java tools and settings</description>
 </setup:Project>
