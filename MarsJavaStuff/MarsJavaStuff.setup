@@ -253,10 +253,6 @@
         name="org.eclipse.contribution.weaving.feature.group"
         versionRange="2.2.4"/>
     <requirement
-        name="net.sf.jautodoc.feature.feature.group"
-        versionRange="1.11.1"
-        optional="true"/>
-    <requirement
         name="fr.obeo.releng.targetplatform-feature.feature.group"
         versionRange="2.1.1"/>
     <requirement
