@@ -93,10 +93,13 @@
         versionRange="[4.5.0,4.6.0)"/>
     <requirement
         name="org.eclipse.jdt.feature.group"
-        versionRange="[3.10.0,3.12.0)"/>
+        versionRange="[3.11.1,3.12.0)"/>
     <requirement
         name="org.eclipse.pde.feature.group"
-        versionRange="[3.10.0,3.12.0)"/>
+        versionRange="[3.11.1,3.12.0)"/>
+    <requirement
+        name="org.eclipse.epp.package.jee.feature.feature.group"
+        versionRange="[4.5.0,4.6.0)"/>
     <repository
         url="http://download.eclipse.org/technology/epp/packages/mars"/>
     <repository
@@ -239,10 +242,10 @@
   </setupTask>
   <setupTask
       xsi:type="setup.p2:P2Task"
-      label="Misc Java Utils - Mars">
+      label="Misc">
     <requirement
         name="org.aspectj.feature.group"
-        versionRange="1.8.3"/>
+        versionRange="1.8.6"/>
     <requirement
         name="org.eclipse.ajdt.feature.group"
         versionRange="2.2.4"/>
@@ -250,8 +253,12 @@
         name="org.eclipse.contribution.weaving.feature.group"
         versionRange="2.2.4"/>
     <requirement
+        name="net.sf.jautodoc.feature.feature.group"
+        versionRange="1.11.1"
+        optional="true"/>
+    <requirement
         name="fr.obeo.releng.targetplatform-feature.feature.group"
-        versionRange="2.1.0"/>
+        versionRange="2.1.1"/>
     <requirement
         name="de.bastiankrol.startexplorer.feature.feature.group"
         versionRange="1.7.0"
@@ -261,8 +268,7 @@
         versionRange="1.1.1"/>
     <requirement
         name="net.sf.gted.feature.feature.group"
-        versionRange="1.7.0"
-        optional="true"/>
+        versionRange="1.8.0"/>
     <requirement
         name="AnyEditTools.feature.group"
         versionRange="2.4.15"
@@ -280,16 +286,22 @@
         optional="true"/>
     <requirement
         name="org.eclipse.xtend.sdk.feature.group"
-        versionRange="2.8.3"
+        versionRange="[2.8.0,2.9.0)"/>
+    <requirement
+        name="com.googlecode.eclipse.navigatorext.features.feature.group"
+        versionRange="1.1.3"
         optional="true"/>
+    <requirement
+        name="org.eclipse.xtext.sdk.feature.group"
+        versionRange="[2.8.0,2.9.0)"/>
     <repository
         url="http://mbarbero.github.io/fr.obeo.releng.targetplatform/p2/latest/"/>
     <repository
         url="http://download.itemis.de/updates/"/>
     <repository
-        url="http://download.eclipse.org/mylyn/releases/luna"/>
+        url="http://download.eclipse.org/mylyn/releases/latest"/>
     <repository
-        url="http://download.eclipse.org/tools/ajdt/44/dev/update"/>
+        url="http://download.eclipse.org/tools/ajdt/45/dev/update"/>
     <repository
         url="http://download.eclipse.org/webtools/repository/mars"/>
     <repository
@@ -297,19 +309,9 @@
     <repository
         url="http://www.gted.org/update/site.xml"/>
     <repository
-        url="http://workspacemechanic.eclipselabs.org.codespot.com/git.update/mechanic/"/>
-    <repository
-        url="http://eclipse-cs.sf.net/update"/>
-    <repository
-        url="http://eclipse-cs.sourceforge.net/update/"/>
-    <repository
-        url="http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.7.0/N/0.7.0.201408010849/"/>
-    <repository
-        url="http://subclipse.tigris.org/update_1.10.x"/>
-    <repository
         url="http://download.eclipse.org/technology/nebula/snapshot"/>
     <repository
-        url="http://download.eclipse.org/releases/luna"/>
+        url="http://download.eclipse.org/releases/mars"/>
     <repository
         url="http://update.eclemma.org/"/>
     <repository
@@ -318,6 +320,18 @@
         url="http://basti1302.github.com/startexplorer/update/"/>
     <repository
         url="http://feeling.sourceforge.net/update"/>
+    <repository
+        url="http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/"/>
+    <description>installs misc plugins</description>
+  </setupTask>
+  <setupTask
+      xsi:type="setup.p2:P2Task"
+      label="e(fx)clipse">
+    <requirement
+        name="org.eclipse.fx.ide.feature.feature.group"
+        versionRange="2.1.0"/>
+    <repository
+        url="http://download.eclipse.org/efxclipse/updates-released/2.0.0/site"/>
     <repository
         url="http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/"/>
   </setupTask>
