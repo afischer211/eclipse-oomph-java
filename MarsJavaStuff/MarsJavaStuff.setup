@@ -14,8 +14,8 @@
   <setupTask
       xsi:type="setup:VariableTask"
       name="jboss.tools.url"
-      value="http://download.jboss.org/jbosstools/updates/development/mars/central"
-      defaultValue="http://download.jboss.org/jbosstools/updates/development/mars/central"
+      value="http://download.jboss.org/jbosstools/mars/stable/updates/"
+      defaultValue="http://download.jboss.org/jbosstools/mars/development/updates/"
       label="P2-Repository URL for JBoss Tools"/>
   <setupTask
       xsi:type="setup:VariableTask"
@@ -111,7 +111,7 @@
       label="m2e - Mars">
     <requirement
         name="org.eclipse.m2e.feature.feature.group"
-        versionRange="1.6.0"/>
+        versionRange="1.6.2"/>
     <requirement
         name="org.sonatype.m2e.buildhelper.feature.feature.group"
         versionRange="0.15.0"/>
@@ -132,7 +132,7 @@
         versionRange="0.2.0"/>
     <requirement
         name="org.eclipse.m2e.wtp.sdk.feature.feature.group"
-        versionRange="1.2.0"/>
+        versionRange="1.2.1"/>
     <requirement
         name="org.bitstrings.eclipse.m2e.connectors.xmlbeans.feature.feature.group"
         versionRange="4.0.0"/>
@@ -177,8 +177,12 @@
         name="org.sonatype.m2e.sisu.feature.feature.group"
         versionRange="0.15.0.201409152019"/>
     <requirement
+        name="org.eclipse.m2e.wtp.feature.feature.group"
+        versionRange="1.2.1"
+        optional="true"/>
+    <requirement
         name="org.eclipse.m2e.wtp.jaxrs.feature.feature.group"
-        versionRange="1.2.0.20150312-1808"
+        versionRange="1.2.1"
         optional="true"/>
     <requirement
         name="org.jboss.tools.maven.profiles.feature.feature.group"
@@ -193,7 +197,32 @@
     <requirement
         name="org.sonatype.tycho.m2e.feature.feature.group"
         versionRange="0.9.0"/>
-    <repository
+    <requirement
+        name="org.basepom.m2e.duplicate-finder.feature.feature.group"
+        versionRange="1.0.4"
+        optional="true"/>
+    <requirement
+        name="org.basepom.m2e.property-helper.feature.feature.group"
+        versionRange="1.0.4"
+        optional="true"/>
+    <requirement
+        name="org.basepom.m2e.mycila-license.feature.feature.group"
+        versionRange="1.0.4"
+        optional="true"/>
+    <requirement
+        name="com.coderplus.m2e.yuicompressorfeature.feature.group"
+        optional="true"/>
+    <requirement
+        name="de.theit.m2e.axistools.feature.feature.group"
+        optional="true"/>
+    <requirement
+        name="org.jboss.tools.maven.profiles.feature.feature.group"
+        versionRange="1.5.5.Final-v20140311-0548-B153"/>
+    <requirement
+        name="org.eclipse.m2e.core.ui.phasesandgoals.feature.feature.group"
+        versionRange="1.0.65"
+        filter=""/>
+	<repository
         url="http://download.eclipse.org/m2e-wtp/releases/mars/"/>
     <repository
         url="${m2e.thirdparty.connectors.url}/m2eclipse-antlr/0.15.0/N/0.15.0.201207090124/"/>
@@ -212,7 +241,7 @@
     <repository
         url="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-jdt-compiler/"/>
     <repository
-        url="http://download.jboss.org/jbosstools/updates/stable/luna/"/>
+        url="http://download.jboss.org/jbosstools/mars/stable/updates/"/>
     <repository
         url="http://download.jboss.org/jbosstools/updates/stable/kepler"/>
     <repository
@@ -239,6 +268,19 @@
         url="http://m2e-code-quality.github.io/m2e-code-quality/site/1.0.0"/>
     <repository
         url="http://www.ancitconsulting.com/tycho-utils/"/>
+    <repository
+        url="http://basepom.github.io/basepom-m2e/update-site/latest/"/>
+    <repository
+        url="http://download.eclipse.org/tools/ajdt/45/dev/update"/>
+    <repository
+        url="http://dist.springsource.org/release/AJDT/composite/"/>
+    <repository
+        url="http://theit.github.com/m2e-lifecycle-axistools"/>
+    <repository
+        url="http://download.jboss.org/jbosstools/updates/stable/kepler"/>
+    <repository
+        url="https://bintray.com/artifact/download/sandipchitale/MavenPhasesAndGoalsEclipsePluginUpdatesite/site.xml"/>
+    <description>install plugins and connectors for maven support</description>
   </setupTask>
   <setupTask
       xsi:type="setup.p2:P2Task"
