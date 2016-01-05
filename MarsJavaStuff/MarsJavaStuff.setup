@@ -324,14 +324,14 @@
         optional="true"/>
     <requirement
         name="org.eclipse.xtend.sdk.feature.group"
-        versionRange="[2.8.0,2.9.0)"/>
+        versionRange="[2.8.0,2.10.0)"/>
     <requirement
         name="com.googlecode.eclipse.navigatorext.features.feature.group"
         versionRange="1.1.3"
         optional="true"/>
     <requirement
         name="org.eclipse.xtext.sdk.feature.group"
-        versionRange="[2.8.0,2.9.0)"/>
+        versionRange="[2.8.0,2.10.0)"/>
     <repository
         url="http://mbarbero.github.io/fr.obeo.releng.targetplatform/p2/latest/"/>
     <repository
