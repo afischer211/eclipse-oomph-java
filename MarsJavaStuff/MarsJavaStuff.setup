@@ -332,6 +332,18 @@
     <requirement
         name="org.eclipse.xtext.sdk.feature.group"
         versionRange="[2.8.0,2.10.0)"/>
+    <requirement
+        name="com.codeaffine.extras.launch.feature.feature.group"
+        versionRange="1.0.0"/>
+    <requirement
+        name="com.codeaffine.extras.ide.feature.feature.group"
+        versionRange="1.0.0"/>
+    <requirement
+        name="com.codeaffine.extras.jdt.feature.feature.group"
+        versionRange="1.0.0"/>
+    <requirement
+        name="com.codeaffine.extras.workingset.feature.feature.group"
+        versionRange="1.0.0"/>
     <repository
         url="http://mbarbero.github.io/fr.obeo.releng.targetplatform/p2/latest/"/>
     <repository
@@ -357,9 +369,9 @@
     <repository
         url="http://basti1302.github.com/startexplorer/update/"/>
     <repository
-        url="http://feeling.sourceforge.net/update"/>
-    <repository
         url="http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/"/>
+    <repository
+        url="https://rherrmann.github.io/eclipse-extras/repository/"/>
     <description>installs misc plugins</description>
   </setupTask>
   <setupTask
