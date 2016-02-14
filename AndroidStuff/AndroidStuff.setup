@@ -317,8 +317,6 @@
       <repository
           url="http://basti1302.github.com/startexplorer/update/"/>
       <repository
-          url="http://feeling.sourceforge.net/update"/>
-      <repository
           url="http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/"/>
     </setupTask>
   </setupTask>
