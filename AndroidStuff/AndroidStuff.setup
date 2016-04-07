@@ -250,7 +250,7 @@
         label="Misc Java Utils">
       <requirement
           name="org.aspectj.feature.group"
-          versionRange="1.8.3"/>
+          versionRange="1.8.9"/>
       <requirement
           name="org.eclipse.ajdt.feature.group"
           versionRange="2.2.4"/>

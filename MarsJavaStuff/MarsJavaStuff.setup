@@ -287,7 +287,7 @@
       label="Misc">
     <requirement
         name="org.aspectj.feature.group"
-        versionRange="1.8.6"/>
+        versionRange="1.8.9"/>
     <requirement
         name="org.eclipse.ajdt.feature.group"
         versionRange="2.2.4"/>
