@@ -155,9 +155,6 @@
           name="org.jboss.tools.m2e.jdt.feature.feature.group"
           versionRange="1.0.1.201209200903"/>
       <requirement
-          name="de.joe.m2e.apt.feature.feature.group"
-          versionRange="0.0.1.3"/>
-      <requirement
           name="org.jboss.tools.maven.jdt.feature.feature.group"
           versionRange="1.6.2.Final-v20150325-0325-B120"/>
       <requirement
@@ -224,8 +221,6 @@
           url="http://download.eclipse.org/technology/m2e/milestones/1.6/"/>
       <repository
           url="http://ianbrandt.github.io/m2e-maven-dependency-plugin/"/>
-      <repository
-          url="http://apt-m2e.googlecode.com/git/updateSite/"/>
       <repository
           url="http://coderplus.com/m2e-update-sites/jaxws-maven-plugin/"/>
       <repository
