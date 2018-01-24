@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<setup:Project
+  xmi:version="2.0"
+  xmlns:xmi="http://www.omg.org/XMI"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
+  xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
+  name="docker.stuff"
+  label="Mars Docker Tools setup stuff">
+  <setupTask xsi:type="setup:VariableTask" name="train.url" value="http://download.eclipse.org/releases/mars"/>
+  <setupTask xsi:type="setup:EclipseIniTask" id="" option="-Xss" value="4m" vm="true"/>
+  <setupTask xsi:type="setup:EclipseIniTask" option="-Xms" value="1024m" vm="true"/>
+  <setupTask xsi:type="setup:EclipseIniTask" option="-Xmx" value="3172m" vm="true">
+    <description>Set the heap space needed to work with the projects of ${scope.project.label}</description>
+  </setupTask>
+  <setupTask xsi:type="setup:EclipseIniTask" option="-XX:" value="+UseG1GC" vm="true"/>
+  <setupTask xsi:type="setup:EclipseIniTask" option="-XX:" value="+UseFastAccessorMethods" vm="true"/>
+  <setupTask xsi:type="setup:EclipseIniTask" option="-XX:" value="+UnlockExperimentalVMOptions" vm="true"/>
+  <setupTask xsi:type="setup:EclipseIniTask" option="-XX:" value="PermSize=512M" vm="true"/>
+  <setupTask xsi:type="setup:EclipseIniTask" option="-XX:" value="MaxPermSize=1024M" vm="true"/>
+  <setupTask xsi:type="setup:EclipseIniTask" option="-Declipse.p2.unsignedPolicy" value="=allow" vm="true"/>
+  <setupTask xsi:type="setup:EclipseIniTask" option="-Xverify:" value="none" vm="true"/>
+  <setupTask xsi:type="setup.p2:P2Task" label="Eclipse Standard/SDK - Mars">
+    <requirement name="org.eclipse.platform.feature.group" versionRange="[4.5.0,4.6.0)"/>
+    <requirement name="org.eclipse.rcp.feature.group" versionRange="[4.5.0,4.6.0)"/>
+    <requirement name="org.eclipse.jdt.feature.group" versionRange="[3.11.1,3.12.0)"/>
+    <repository url="http://download.eclipse.org/technology/epp/packages/mars"/>
+    <repository url="http://download.eclipse.org/releases/mars"/>
+    <description>Install the tools needed in the IDE to work with the source code for ${scope.project.label}</description>
+  </setupTask>
+  <setupTask xsi:type="setup.p2:P2Task" label="Misc">
+    <requirement name="de.bastiankrol.startexplorer.feature.feature.group" versionRange="1.7.0" optional="true"/>
+    <requirement name="AnyEditTools.feature.group" versionRange="2.4.15" optional="true"/>
+    <requirement name="com.googlecode.eclipse.navigatorext.features.feature.group" versionRange="1.1.3" optional="true"/>
+    <requirement name="com.codeaffine.extras.launch.feature.feature.group" versionRange="1.0.0"/>
+    <repository url="http://download.eclipse.org/mylyn/releases/latest"/>
+    <repository url="http://download.eclipse.org/webtools/repository/mars"/>
+    <repository url="http://www.gted.org/update/site.xml"/>
+    <repository url="http://download.eclipse.org/technology/nebula/snapshot"/>
+    <repository url="http://download.eclipse.org/releases/mars"/>
+    <repository url="http://andrei.gmxhome.de/eclipse/"/>
+    <repository url="http://basti1302.github.com/startexplorer/update/"/>
+    <repository url="https://rherrmann.github.io/eclipse-extras/repository/"/>
+    <description>installs misc plugins</description>
+  </setupTask>
+  <setupTask xsi:type="setup.p2:P2Task" label="docker">
+    <!--<requirement name="eu.openanalytics.editor.docker.feature.group" versionRange="1.0.0"/> -->
+    <requirement name="com.zenika.doclipser.features.dockerfileeditor.feature.group" versionRange="0.4.3"/>
+    <requirement name="com.zenika.doclipser.features.dockerclient.feature.group" versionRange="0.4.3"/>
+    <requirement name="org.eclipse.linuxtools.docker.feature.feature.group" versionRange="2.0.0"/>
+    <requirement name="org.eclipse.linuxtools.vagrant.feature.feature.group" versionRange="2.0.0"/>
+    <repository url="http://docker-editor.openanalytics.eu/update"/>
+    <repository url="https://dl.bintray.com/zenika/doclipser"/>
+    <repository url="http://download.eclipse.org/linuxtools/updates-docker-nightly/"/>
+    <repository url="http://download.eclipse.org/linuxtools/update-docker-2.0.0/"/>
+    <description>installs docker plugins</description>
+  </setupTask>
+  <setupTask xsi:type="setup:CompoundTask" name="org.eclipse.core.resources">
+    <setupTask xsi:type="setup:PreferenceTask" key="/instance/org.eclipse.core.resources/encoding" value="UTF-8"/>
+  </setupTask>
+  <stream name="master"/>
+  <logicalProjectContainer xsi:type="setup:ProjectCatalog" href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']"/>
+  <description>Eclipse-Setup for useful Docker tools and settings</description>
+</setup:Project>
